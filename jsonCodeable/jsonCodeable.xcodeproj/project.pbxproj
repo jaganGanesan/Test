@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A710225F2257773C00E8A6B7 /* RootClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A710225E2257773C00E8A6B7 /* RootClass.swift */; };
 		A745C09722572D2100BB4E8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A745C09622572D2100BB4E8F /* AppDelegate.swift */; };
 		A745C09922572D2100BB4E8F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A745C09822572D2100BB4E8F /* ViewController.swift */; };
 		A745C09C22572D2100BB4E8F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A745C09A22572D2100BB4E8F /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A710225E2257773C00E8A6B7 /* RootClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootClass.swift; sourceTree = "<group>"; };
 		A745C09322572D2100BB4E8F /* jsonCodeable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jsonCodeable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A745C09622572D2100BB4E8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A745C09822572D2100BB4E8F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +56,7 @@
 		A745C09522572D2100BB4E8F /* jsonCodeable */ = {
 			isa = PBXGroup;
 			children = (
+				A710225E2257773C00E8A6B7 /* RootClass.swift */,
 				A745C09622572D2100BB4E8F /* AppDelegate.swift */,
 				A745C09822572D2100BB4E8F /* ViewController.swift */,
 				A745C09A22572D2100BB4E8F /* Main.storyboard */,
@@ -136,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A745C09922572D2100BB4E8F /* ViewController.swift in Sources */,
+				A710225F2257773C00E8A6B7 /* RootClass.swift in Sources */,
 				A745C09722572D2100BB4E8F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,6 +289,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 466EYVUZQ6;
 				INFOPLIST_FILE = jsonCodeable/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -303,6 +308,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 466EYVUZQ6;
 				INFOPLIST_FILE = jsonCodeable/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
