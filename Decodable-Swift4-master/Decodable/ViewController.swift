@@ -28,7 +28,11 @@ struct MyGitHub: Codable {
     }
 }
 
+var timer: DispatchSourceTimer!
+
 class ViewController: UIViewController {
+    
+  
 
     @IBAction func ShowGithubInfo(_ sender: Any) {
         
@@ -95,7 +99,22 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setLabelStatus(value: true)
+        
+        timer = DispatchSource.makeTimerSource()
+        timer.schedule(deadline: .now() + .seconds(1), repeating: .seconds(5), leeway: .seconds(1))
+        timer.setEventHandler(handler: { [weak self] in
+            guard let strongSelf = self else { return }
+            strongSelf.saveData()
+        })
+        
+        timer.resume()
+
     }
+    
+    func saveData() {
+        print("❇️Invoked...")
+    }
+
     
     func setLabelStatus(value: Bool) {
         name.isHidden = value

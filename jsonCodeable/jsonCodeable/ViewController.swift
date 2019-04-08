@@ -9,11 +9,36 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    let timeInterval: TimeInterval
+    
+    init(timeInterval: TimeInterval) {
+        self.timeInterval = timeInterval
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    private lazy var timer: DispatchSourceTimer = {
+        let t = DispatchSource.makeTimerSource()
+        t.schedule(deadline: .now() + self.timeInterval, repeating: self.timeInterval)
+        t.setEventHandler(handler: { [weak self] in
+            self?.eventHandler?()
+        })
+        return t
+    }()
+    var eventHandler: (() -> Void)?
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.testData()
+        
+        
+       
+        
     }
 
     func testData () -> Void
